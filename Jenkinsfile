@@ -2,12 +2,12 @@ pipeline{
     agent {label 'MASTER'}
     stages {
         stage('source'){
-            step{
+            steps {
                 git 'https://github.com/gyana210/gol.git'
             }
         }
         stage('build'){
-            step{
+            steps {
                 sh 'mvn package'
             }
         }
